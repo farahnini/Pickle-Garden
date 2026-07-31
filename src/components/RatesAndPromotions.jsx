@@ -67,7 +67,7 @@ export default function RatesAndPromotions() {
             </div>
           </div>
 
-          {/* How Booking Works (3-step visual inside dark card) */}
+          {/* How Booking Works (Keep as elegant dark card for layout contrast) */}
           <div className="lg:col-span-6 glass-panel p-6 sm:p-8 border border-[#b39364]/20 space-y-6">
             <h3 className="font-display font-bold text-lg text-white uppercase tracking-wider border-b border-white/10 pb-3">
               How Booking Works
@@ -96,7 +96,7 @@ export default function RatesAndPromotions() {
           </div>
         </div>
 
-        {/* Promotions Grid */}
+        {/* Promotions Grid - Converted to Light luxury cards with gold outlines */}
         <div className="space-y-8 pt-8 border-t border-[#122c1d]/10">
           <div className="text-center max-w-2xl mx-auto space-y-2">
             <span className="text-xs font-bold uppercase tracking-widest text-[#b39364]">Special Deals</span>
@@ -108,26 +108,26 @@ export default function RatesAndPromotions() {
             {PROMOTIONS.map((promo) => (
               <div 
                 key={promo.id} 
-                className="glass-panel p-6 border border-[#b39364]/20 hover:border-[#b39364]/50 flex flex-col justify-between group transition-all duration-300"
+                className="bg-[#fdfbf7] border border-[#b39364]/30 hover:border-[#122c1d]/40 rounded-2xl p-6 flex flex-col justify-between group transition-all duration-300 shadow-sm hover:shadow-md"
               >
                 <div className="space-y-3">
-                  <span className="inline-block text-[10px] font-bold tracking-widest bg-[#b39364]/20 border border-[#b39364]/35 text-[#b39364] px-2 py-0.5 rounded-md uppercase">
+                  <span className="inline-block text-[10px] font-bold tracking-widest bg-[#b39364]/10 border border-[#b39364]/20 text-[#8c7046] px-2.5 py-0.5 rounded-md uppercase">
                     {promo.tag}
                   </span>
-                  <h4 className="font-bold text-white text-lg group-hover:text-[#b39364] transition-colors">
+                  <h4 className="font-bold text-[#122c1d] text-lg group-hover:text-[#b39364] transition-colors">
                     {promo.title}
                   </h4>
-                  <p className="text-xs sm:text-sm text-[#e6dcc7] leading-relaxed font-light">
+                  <p className="text-xs sm:text-sm text-[#4c5e52] leading-relaxed font-light">
                     {promo.description}
                   </p>
                 </div>
 
-                <div className="pt-4 border-t border-white/10 mt-4">
+                <div className="pt-4 border-t border-[#122c1d]/10 mt-4">
                   <a
                     href={promo.id === 'off-peak' ? VENUE_INFO.bookingUrl : VENUE_INFO.whatsappUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full inline-flex items-center justify-center gap-1.5 bg-white/10 hover:bg-[#b39364] hover:text-[#122c1d] text-white font-bold py-2.5 rounded-xl text-xs tracking-wider uppercase transition-all"
+                    className="w-full inline-flex items-center justify-center gap-1.5 bg-[#122c1d] hover:bg-[#b39364] text-white hover:text-[#122c1d] font-bold py-2.5 rounded-xl text-xs tracking-wider uppercase transition-all"
                   >
                     <span>{promo.id === 'off-peak' ? "Book Slot" : "Inquire Now"}</span>
                   </a>

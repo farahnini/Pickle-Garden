@@ -36,7 +36,7 @@ export default function CourtsAndFacilities() {
           </div>
         </div>
 
-        {/* Facilities Amenities Grid */}
+        {/* Facilities Amenities Grid - Converted to Light luxury outline cards */}
         <div className="space-y-8">
           <div className="text-center max-w-2xl mx-auto space-y-2">
             <span className="text-xs font-bold uppercase tracking-widest text-[#b39364]">Premier Setup</span>
@@ -46,18 +46,21 @@ export default function CourtsAndFacilities() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {amenities.map((item, idx) => (
-              <div key={idx} className="glass-panel p-6 border border-[#b39364]/20 hover:border-[#b39364]/50 transition-all group duration-300">
+              <div 
+                key={idx} 
+                className="bg-white/80 border border-[#122c1d]/10 hover:border-[#b39364]/50 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all group duration-300"
+              >
                 <div className="flex items-start gap-4">
                   {/* High contrast check circle */}
-                  <div className="w-8 h-8 rounded-lg bg-[#b39364]/20 text-[#b39364] flex items-center justify-center shrink-0 group-hover:bg-[#b39364] group-hover:text-[#122c1d] transition-all duration-300">
+                  <div className="w-8 h-8 rounded-lg bg-[#122c1d]/5 text-[#122c1d] flex items-center justify-center shrink-0 group-hover:bg-[#122c1d] group-hover:text-[#fdfbf7] transition-all duration-300">
                     <Check className="w-4.5 h-4.5" />
                   </div>
                   <div>
-                    {/* High contrast text inside dark card */}
-                    <h4 className="font-bold text-white text-base tracking-wide group-hover:text-[#b39364] transition-colors">
+                    {/* Dark forest green text for light cards */}
+                    <h4 className="font-bold text-[#122c1d] text-base tracking-wide group-hover:text-[#b39364] transition-colors">
                       {item.title}
                     </h4>
-                    <p className="text-xs sm:text-sm text-[#e6dcc7] mt-1 leading-relaxed font-light">
+                    <p className="text-xs sm:text-sm text-[#4c5e52] mt-1 leading-relaxed font-light">
                       {item.desc}
                     </p>
                   </div>
@@ -102,7 +105,7 @@ export default function CourtsAndFacilities() {
 
       </div>
 
-      {/* Lightbox Modal (Dark backdrop modal for image view remains) */}
+      {/* Lightbox Modal */}
       {activeImage && (
         <div 
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
