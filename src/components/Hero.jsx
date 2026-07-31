@@ -20,7 +20,7 @@ export default function Hero() {
       className="relative pt-44 pb-28 flex items-center bg-cover bg-center bg-no-repeat min-h-[85vh] overflow-hidden"
       style={{ backgroundImage: "url('./assets/poster-court.jpeg')" }}
     >
-      {/* Premium deep forest green and black gradient mask overlay for high text contrast and luxury tone */}
+      {/* Premium deep forest green and black gradient mask overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#060e0a]/90 via-[#0c1c14]/80 to-transparent pointer-events-none" />
       <div className="absolute inset-0 bg-black/40 pointer-events-none" />
 
@@ -35,7 +35,7 @@ export default function Hero() {
             Petaling Jaya, Selangor
           </span>
           
-          {/* Headline pairing (Serif Playfair + Sans Outfit) in high-contrast light colors */}
+          {/* Headline pairing (Serif Playfair + Sans Outfit) */}
           <h1 className="leading-[0.95] tracking-tight uppercase">
             <span className="animate-hero-item opacity-0 font-serif italic font-normal text-3xl sm:text-4xl md:text-5xl lowercase tracking-normal text-[#b39364] block mb-2">
               play where
@@ -45,29 +45,29 @@ export default function Hero() {
             </span>
           </h1>
           
-          {/* Description */}
-          <p className="animate-hero-item opacity-0 text-base sm:text-lg text-[#e6dcc7] font-light leading-relaxed max-w-xl drop-shadow-sm">
+          {/* Description - Upgraded to much bigger font size (text-lg sm:text-xl md:text-2xl) */}
+          <p className="animate-hero-item opacity-0 text-lg sm:text-xl md:text-2xl text-[#e6dcc7] font-light leading-relaxed max-w-2xl drop-shadow-sm">
             Experience Selangor's premier dedicated indoor pickleball venue. Three professional hard courts with permanent lines, nets, and full amenities at Seksyen 51A. 
           </p>
 
-          {/* Action Buttons */}
+          {/* Action Buttons - Upgraded to fixed heights (h-14 sm:h-16) for a massive, premium feel */}
           <div className="animate-hero-item opacity-0 flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-3">
             <a
               href={VENUE_INFO.bookingUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 bg-gradient-to-r from-[#b39364] via-[#c2a980] to-[#d4c2a3] hover:from-[#c2a980] hover:to-[#b39364] text-[#122c1d] font-black px-8 py-4 rounded-lg transition-all uppercase tracking-wider text-xs shadow-lg hover:scale-[1.02]"
+              className="flex items-center justify-center gap-2.5 bg-gradient-to-r from-[#b39364] via-[#c2a980] to-[#d4c2a3] hover:from-[#c2a980] hover:to-[#b39364] text-[#122c1d] font-black px-8 sm:px-10 h-14 sm:h-16 rounded-xl transition-all uppercase tracking-widest text-xs sm:text-sm shadow-lg hover:scale-[1.02]"
             >
-              <Calendar className="w-4 h-4 text-[#122c1d]" />
+              <Calendar className="w-4 h-4 sm:w-5 h-5 text-[#122c1d]" />
               <span>Book A Court</span>
             </a>
             <a
               href={VENUE_INFO.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-bold px-8 py-4 rounded-lg transition-all uppercase tracking-wider text-xs border border-white/20 backdrop-blur-sm"
+              className="flex items-center justify-center gap-2.5 bg-white/10 hover:bg-white/20 text-white font-bold px-8 sm:px-10 h-14 sm:h-16 rounded-xl transition-all uppercase tracking-widest text-xs sm:text-sm border border-white/20 backdrop-blur-sm"
             >
-              <MessageSquare className="w-4 h-4 text-[#b39364]" />
+              <MessageSquare className="w-4 h-4 sm:w-5 h-5 text-[#b39364]" />
               <span>WhatsApp Us</span>
             </a>
           </div>

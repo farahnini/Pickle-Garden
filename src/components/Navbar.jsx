@@ -18,7 +18,7 @@ export default function Navbar() {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       scrolled 
         ? 'bg-[#fdfbf7]/95 backdrop-blur-md border-b border-[#b39364]/20 py-4 shadow-md' 
-        : 'bg-slate-950/30 backdrop-blur-sm border-b border-white/5 py-5'
+        : 'bg-slate-950/45 backdrop-blur-sm border-b border-white/5 py-5'
     }`}>
       {/* Top Banner Bar */}
       <div className={`hidden lg:block border-b pb-3 mb-3 transition-colors ${
@@ -75,16 +75,14 @@ export default function Navbar() {
           </div>
         </a>
 
-        {/* Desktop Nav Links - Color adjusts based on scrolled state */}
-        <nav className={`hidden lg:flex items-center gap-8 font-semibold text-xs uppercase tracking-wider transition-colors ${
-          scrolled ? 'text-[#122c1d]' : 'text-white/95'
-        }`}>
-          <a href="#about" className="hover:text-[#b39364] transition-colors py-1">About</a>
-          <a href="#courts" className="hover:text-[#b39364] transition-colors py-1">Facilities</a>
-          <a href="#rates" className="hover:text-[#b39364] transition-colors py-1">Rates</a>
-          <a href="#open-play" className="hover:text-[#b39364] transition-colors py-1">Community</a>
-          <a href="#pro-shop" className="hover:text-[#b39364] transition-colors py-1">Pro Shop</a>
-          <a href="#contact" className="hover:text-[#b39364] transition-colors py-1">Contact</a>
+        {/* Desktop Nav Links - Colors applied directly to <a> tags for robust styling */}
+        <nav className="hidden lg:flex items-center gap-8 font-semibold text-xs uppercase tracking-wider transition-colors">
+          <a href="#about" className={`hover:text-[#b39364] transition-colors py-1 ${scrolled ? 'text-[#122c1d]' : 'text-white'}`}>About</a>
+          <a href="#courts" className={`hover:text-[#b39364] transition-colors py-1 ${scrolled ? 'text-[#122c1d]' : 'text-white'}`}>Facilities</a>
+          <a href="#rates" className={`hover:text-[#b39364] transition-colors py-1 ${scrolled ? 'text-[#122c1d]' : 'text-white'}`}>Rates</a>
+          <a href="#open-play" className={`hover:text-[#b39364] transition-colors py-1 ${scrolled ? 'text-[#122c1d]' : 'text-white'}`}>Community</a>
+          <a href="#pro-shop" className={`hover:text-[#b39364] transition-colors py-1 ${scrolled ? 'text-[#122c1d]' : 'text-white'}`}>Pro Shop</a>
+          <a href="#contact" className={`hover:text-[#b39364] transition-colors py-1 ${scrolled ? 'text-[#122c1d]' : 'text-white'}`}>Contact</a>
         </nav>
 
         {/* Right CTA Actions */}
