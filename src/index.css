@@ -4,61 +4,63 @@
 
 @layer base {
   body {
-    @apply bg-[#0b1a13] text-slate-100 font-sans antialiased selection:bg-pickle-500 selection:text-black;
+    @apply bg-[#fdfbf7] text-[#122c1d] font-sans antialiased selection:bg-[#b39364] selection:text-white;
   }
 }
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #0b1a13;
+  background: #fdfbf7;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1f3d2b;
-  border-radius: 5px;
+  background: #e6dfd3;
+  border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #84cc16;
+  background: #b39364;
 }
 
-/* Glassmorphism utility */
+/* Luxury Forest Green Card Theme */
 .glass-panel {
-  background: rgba(18, 41, 29, 0.65);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(132, 204, 22, 0.15);
+  background: #122c1d;
+  border: 1px solid rgba(179, 147, 100, 0.25);
+  box-shadow: 0 10px 30px -10px rgba(18, 44, 29, 0.15);
+  border-radius: 1.5rem;
 }
 
 .glass-panel-hover {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .glass-panel-hover:hover {
-  background: rgba(26, 54, 39, 0.85);
-  border-color: rgba(132, 204, 22, 0.4);
+  background: #183826;
+  border-color: rgba(179, 147, 100, 0.5);
   transform: translateY(-4px);
-  box-shadow: 0 20px 40px -15px rgba(132, 204, 22, 0.2);
+  box-shadow: 0 20px 40px -15px rgba(18, 44, 29, 0.35);
 }
 
+/* Elegant Text Gradient - Deep Forest to Luxury Gold */
 .text-gradient {
-  background: linear-gradient(135deg, #a3e635 0%, #84cc16 50%, #38bdf8 100%);
+  background: linear-gradient(135deg, #122c1d 0%, #7d6543 50%, #b39364 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-gradient-gold {
-  background: linear-gradient(135deg, #fef08a 0%, #facc15 50%, #eab308 100%);
+  background: linear-gradient(135deg, #fdfbf7 0%, #b39364 50%, #e6dcc7 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.glow-lime {
-  box-shadow: 0 0 35px -5px rgba(132, 204, 22, 0.3);
+/* Subtle luxury glow */
+.glow-luxury {
+  box-shadow: 0 0 35px -10px rgba(179, 147, 100, 0.15);
 }
 
-/* Pickleball ball texture dots background */
+/* Soft textured backdrop */
 .pickle-pattern {
-  background-image: radial-gradient(rgba(132, 204, 22, 0.12) 1.5px, transparent 1.5px);
-  background-size: 24px 24px;
+  background-image: radial-gradient(rgba(179, 147, 100, 0.08) 1px, transparent 1px);
+  background-size: 32px 32px;
 }

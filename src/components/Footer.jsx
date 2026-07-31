@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { VENUE_INFO } from '../data/mockData';
-import { Instagram, MapPin, Phone, Mail, ArrowUp, Send, CheckCircle2 } from 'lucide-react';
+import { Instagram, MapPin, Phone, MessageSquare, ArrowUp, Send, CheckCircle2 } from 'lucide-react';
 
 export default function Footer() {
   const [subscribed, setSubmitted] = useState(false);
@@ -25,8 +25,8 @@ export default function Footer() {
           {/* Brand Column (4 cols) */}
           <div className="lg:col-span-4 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-pickle-400 to-pickle-600 flex items-center justify-center text-xl shadow-lg shadow-pickle-500/30">
-                🥒
+              <div className="w-10 h-10 rounded-xl overflow-hidden shadow-md shrink-0 border border-[#b39364]/20">
+                <img src="./assets/logo.jpg" alt="Pickle Garden Logo" className="w-full h-full object-cover" />
               </div>
               <span className="font-display font-black text-2xl tracking-tight text-white">
                 PICKLE GARDEN
@@ -34,7 +34,7 @@ export default function Footer() {
             </div>
 
             <p className="text-slate-400 text-xs leading-relaxed max-w-sm">
-              Ponte Vedra Beach's premier pickleball facility at The Yards. 12 dedicated illuminated courts, daily open play, pro coaching, and vibrant social events.
+              Petaling Jaya's dedicated indoor pickleball facility. Featuring 3 indoor hard courts, permanent lines & nets, on-site Surau, changing rooms, and a welcoming community.
             </p>
 
             <div className="flex items-center gap-3 pt-2">
@@ -48,18 +48,13 @@ export default function Footer() {
                 <Instagram className="w-4 h-4" />
               </a>
               <a
-                href={`tel:${VENUE_INFO.phone}`}
+                href={VENUE_INFO.whatsappUrl}
+                target="_blank"
+                rel="noreferrer"
                 className="w-9 h-9 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-pickle-400 hover:text-white hover:bg-pickle-600 hover:border-pickle-500 transition-all"
-                aria-label="Phone"
+                aria-label="WhatsApp"
               >
-                <Phone className="w-4 h-4" />
-              </a>
-              <a
-                href={`mailto:${VENUE_INFO.email}`}
-                className="w-9 h-9 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-sky-400 hover:text-white hover:bg-sky-600 hover:border-sky-500 transition-all"
-                aria-label="Email"
-              >
-                <Mail className="w-4 h-4" />
+                <MessageSquare className="w-4 h-4" />
               </a>
             </div>
           </div>
@@ -68,11 +63,11 @@ export default function Footer() {
           <div className="lg:col-span-2 space-y-3">
             <div className="font-display font-bold text-white text-sm uppercase tracking-wider">Explore</div>
             <ul className="space-y-2 text-xs">
-              <li><a href="#courts" className="hover:text-pickle-400 transition-colors">12 Courts Map</a></li>
-              <li><a href="#programs" className="hover:text-pickle-400 transition-colors">Open Drop-In Play</a></li>
-              <li><a href="#programs" className="hover:text-pickle-400 transition-colors">Clinics & Bootcamps</a></li>
-              <li><a href="#memberships" className="hover:text-pickle-400 transition-colors">Garden Club Plans</a></li>
-              <li><a href="#coaches" className="hover:text-pickle-400 transition-colors">Private Coaching</a></li>
+              <li><a href="#about" className="hover:text-pickle-400 transition-colors">About Us</a></li>
+              <li><a href="#courts" className="hover:text-pickle-400 transition-colors">Facilities Map</a></li>
+              <li><a href="#rates" className="hover:text-pickle-400 transition-colors">Rates & Offers</a></li>
+              <li><a href="#open-play" className="hover:text-pickle-400 transition-colors">Community Socials</a></li>
+              <li><a href="#pro-shop" className="hover:text-pickle-400 transition-colors">Pro Shop</a></li>
             </ul>
           </div>
 
@@ -80,17 +75,24 @@ export default function Footer() {
           <div className="lg:col-span-3 space-y-3">
             <div className="font-display font-bold text-white text-sm uppercase tracking-wider">Venue Specs</div>
             <ul className="space-y-2 text-xs">
-              <li className="flex items-center gap-2"><MapPin className="w-3.5 h-3.5 text-pickle-400" /> {VENUE_INFO.address}</li>
-              <li className="flex items-center gap-2"><Phone className="w-3.5 h-3.5 text-pickle-400" /> {VENUE_INFO.phone}</li>
-              <li>Open 7 Days a Week: 8:00 AM - 10:00 PM</li>
-              <li className="text-pickle-400 font-semibold">Pro Shop & Beer Garden On-Site</li>
+              <li className="flex items-start gap-2">
+                <MapPin className="w-3.5 h-3.5 text-pickle-400 shrink-0 mt-0.5" /> 
+                <span>{VENUE_INFO.address}</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <Phone className="w-3.5 h-3.5 text-pickle-400" /> 
+                <span>WhatsApp: {VENUE_INFO.phoneDisplay}</span>
+              </li>
+              <li className="text-pickle-400 font-semibold">
+                Open Daily: 8 AM - 1 AM (Wed till 2 AM)
+              </li>
             </ul>
           </div>
 
           {/* Newsletter Column (3 cols) */}
           <div className="lg:col-span-3 space-y-3">
             <div className="font-display font-bold text-white text-sm uppercase tracking-wider">Stay In The Loop</div>
-            <p className="text-xs text-slate-400">Get early access to tournament signups and social night discounts.</p>
+            <p className="text-xs text-slate-400">Get early access to weekly community play sessions and updates.</p>
             
             {subscribed ? (
               <div className="p-3 bg-pickle-500/20 border border-pickle-500/40 rounded-xl text-xs text-pickle-300 flex items-center gap-2">
@@ -122,7 +124,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <div>
-            © {new Date().getFullYear()} Pickle Garden at The Yards. All rights reserved.
+            © {new Date().getFullYear()} {VENUE_INFO.name}. All rights reserved.
           </div>
           <div className="flex items-center gap-6">
             <a href={VENUE_INFO.instagramUrl} target="_blank" rel="noreferrer" className="hover:text-pink-400 transition-colors">

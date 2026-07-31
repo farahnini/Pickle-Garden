@@ -8,17 +8,17 @@ export default {
     extend: {
       colors: {
         pickle: {
-          50: '#f7fee7',
-          100: '#ecfccb',
-          200: '#d9f99d',
-          300: '#bef264',
-          400: '#a3e635',
-          500: '#84cc16',
-          600: '#65a30d',
-          700: '#4d7c0f',
-          800: '#3f6212',
-          900: '#1a2e05',
-          dark: '#0e1f11',
+          50: '#faf8f5',
+          100: '#f3ede2',
+          200: '#e6dcc7',
+          300: '#d4c2a3',
+          400: '#c2a980',
+          500: '#b39364', // Primary Luxury Gold
+          600: '#9c7a50',
+          700: '#81613f',
+          800: '#664b32',
+          900: '#3b2b1e',
+          dark: '#030a06', // Deep Forest Black
         },
         court: {
           blue: '#0284c7',
@@ -30,6 +30,7 @@ export default {
       fontFamily: {
         sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
         display: ['Outfit', 'Cabinet Grotesk', 'sans-serif'],
+        serif: ['Playfair Display', 'Georgia', 'serif'],
       },
       animation: {
         'bounce-slow': 'bounce 3s infinite',

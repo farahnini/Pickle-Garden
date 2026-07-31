@@ -10,18 +10,18 @@ export default function FaqSection() {
   };
 
   return (
-    <section className="py-20 bg-[#0b1a13] relative">
+    <section className="py-24 bg-[#fdfbf7] relative">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 space-y-12">
         
         {/* Header */}
         <div className="text-center space-y-3">
-          <span className="text-pickle-400 font-bold uppercase tracking-wider text-xs bg-pickle-500/10 px-3 py-1 rounded-full border border-pickle-500/20">
+          <span className="text-[#b39364] font-bold uppercase tracking-wider text-xs bg-[#b39364]/10 px-3 py-1 rounded-full border border-[#b39364]/20">
             GOT QUESTIONS?
           </span>
-          <h2 className="font-display font-extrabold text-3xl sm:text-5xl text-white">
+          <h2 className="font-display font-extrabold text-3xl sm:text-5xl text-[#122c1d]">
             FREQUENTLY ASKED QUESTIONS
           </h2>
-          <p className="text-slate-400 text-sm sm:text-base">
+          <p className="text-[#4c5e52] text-sm sm:text-base">
             Everything you need to know before stepping onto the courts at Pickle Garden.
           </p>
         </div>
@@ -33,25 +33,27 @@ export default function FaqSection() {
             return (
               <div
                 key={index}
-                className="glass-panel rounded-2xl overflow-hidden transition-colors border border-white/10"
+                className="glass-panel rounded-2xl overflow-hidden transition-colors border border-[#b39364]/20"
               >
+                {/* High contrast question text (white) inside dark cards */}
                 <button
                   onClick={() => toggle(index)}
-                  className="w-full p-6 text-left flex items-center justify-between gap-4 font-display font-bold text-base sm:text-lg text-white hover:text-pickle-400 transition-colors cursor-pointer"
+                  className="w-full p-6 text-left flex items-center justify-between gap-4 font-display font-bold text-base sm:text-lg text-white hover:text-[#b39364] transition-colors cursor-pointer"
                 >
                   <span className="flex items-center gap-3">
-                    <HelpCircle className="w-5 h-5 text-pickle-400 shrink-0" />
+                    <HelpCircle className="w-5 h-5 text-[#b39364] shrink-0" />
                     {faq.q}
                   </span>
                   <ChevronDown
-                    className={`w-5 h-5 text-pickle-400 transition-transform duration-300 shrink-0 ${
+                    className={`w-5 h-5 text-[#b39364] transition-transform duration-300 shrink-0 ${
                       isOpen ? 'rotate-180' : 'rotate-0'
                     }`}
                   />
                 </button>
 
+                {/* High contrast answer text (cream) inside dark cards */}
                 {isOpen && (
-                  <div className="px-6 pb-6 pt-1 text-slate-300 text-sm leading-relaxed border-t border-white/5 animate-in fade-in duration-200">
+                  <div className="px-6 pb-6 pt-1 text-[#e6dcc7] text-sm leading-relaxed border-t border-white/10 animate-in fade-in duration-200 font-light">
                     {faq.a}
                   </div>
                 )}

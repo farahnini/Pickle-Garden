@@ -1,168 +1,168 @@
-import React, { useState } from 'react';
-import { Sparkles, Calendar, Clock, Users, ArrowRight, Sun, Award, Zap, ShieldCheck } from 'lucide-react';
-import { TIME_SLOTS, VENUE_INFO } from '../data/mockData';
+import React, { useEffect, useRef } from 'react';
+import { Calendar, MessageSquare, Sparkles } from 'lucide-react';
+import { VENUE_INFO } from '../data/mockData';
+import { animate } from 'animejs';
 
-export default function Hero({ onOpenBooking, onSelectSlot }) {
-  const [selectedDate, setSelectedDate] = useState(() => {
-    const today = new Date();
-    return today.toISOString().split('T')[0];
-  });
-  const [selectedTime, setSelectedTime] = useState(TIME_SLOTS[0]);
-  const [players, setPlayers] = useState(4);
+export default function Hero() {
+  const borderOffsetRef = useRef(null);
 
-  const handleQuickBook = (e) => {
-    e.preventDefault();
-    onSelectSlot({ date: selectedDate, time: selectedTime, players });
-    onOpenBooking();
+  // Entrance animations on page load
+  useEffect(() => {
+    // 1. Staggered reveal for left column items
+    animate('.animate-stagger-item', {
+      translateY: [35, 0],
+      opacity: [0, 1],
+      delay: (el, i) => i * 120, 
+      duration: 1400,
+      easing: 'easeOutExpo'
+    });
+
+    // 2. Springy scale in for right image card container
+    animate('.animate-hero-card', {
+      scale: [0.96, 1],
+      opacity: [0, 1],
+      delay: 300,
+      duration: 1500,
+      easing: 'easeOutElastic(1, 0.85)'
+    });
+
+    // 3. Offset border entry animation
+    animate('.animate-border-offset', {
+      translateX: [15, 6],
+      translateY: [15, 6],
+      opacity: [0, 1],
+      delay: 700,
+      duration: 1200,
+      easing: 'easeOutExpo'
+    });
+  }, []);
+
+  // 4. Interactive Hover Animations using Anime.js
+  const handleMouseEnter = () => {
+    animate(borderOffsetRef.current, {
+      translateX: 12,
+      translateY: 12,
+      borderColor: '#b39364',
+      duration: 500,
+      easing: 'easeOutExpo'
+    });
+  };
+
+  const handleMouseLeave = () => {
+    animate(borderOffsetRef.current, {
+      translateX: 6,
+      translateY: 6,
+      borderColor: 'rgba(179, 147, 100, 0.3)',
+      duration: 600,
+      easing: 'easeOutExpo'
+    });
   };
 
   return (
-    <section className="relative min-h-screen pt-32 pb-20 flex items-center justify-center overflow-hidden bg-[#0b1a13]">
-      {/* Background Glows & Patterns */}
-      <div className="absolute inset-0 pickle-pattern opacity-40 pointer-events-none" />
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-pickle-500/15 rounded-full blur-[140px] pointer-events-none" />
-      <div className="absolute bottom-10 left-10 w-[400px] h-[400px] bg-sky-500/10 rounded-full blur-[120px] pointer-events-none" />
+    <section className="relative pt-36 pb-16 flex items-center justify-center bg-[#fdfbf7] overflow-hidden">
+      {/* Premium organic leaf vector pattern in background */}
+      <div 
+        className="absolute right-0 bottom-0 w-[500px] h-[500px] opacity-[0.03] bg-contain bg-no-repeat pointer-events-none"
+        style={{ backgroundImage: `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%23122c1d" d="M80,20 C60,20 40,40 40,60 C40,70 45,75 50,75 C60,75 80,50 80,20 Z M30,50 C15,50 5,70 5,85 C5,90 10,95 15,95 C30,95 45,80 45,65 C45,55 35,50 30,50 Z"/></svg>')` }}
+      />
+      
+      {/* Subtle structural grid lines */}
+      <div className="absolute inset-0 border-x border-[#122c1d]/5 max-w-7xl mx-auto pointer-events-none" />
 
-      {/* Hero Visual Image Banner overlay */}
-      <div className="absolute inset-0 z-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1599586120429-48281b6f0eca?auto=format&fit=crop&w=2000&q=80')] bg-cover bg-center mix-blend-overlay pointer-events-none" />
-
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 text-center space-y-10">
-        
-        {/* Top Tag Pill */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-pickle-500/10 border border-pickle-500/30 text-pickle-300 text-xs sm:text-sm font-semibold tracking-wide animate-bounce-slow">
-          <Sparkles className="w-4 h-4 text-pickle-400" />
-          <span>PONTE VEDRA BEACH'S PREMIER PICKLEBALL DESTINATION</span>
-        </div>
-
-        {/* Hero Title */}
-        <div className="max-w-4xl mx-auto space-y-4">
-          <h1 className="font-display font-extrabold text-4xl sm:text-6xl md:text-7xl leading-[1.08] tracking-tight text-white">
-            WHERE EVERY GAME <br className="hidden sm:block" />
-            IS A <span className="text-gradient">MASTERPIECE</span>
-          </h1>
-          <p className="text-base sm:text-xl text-slate-300 max-w-2xl mx-auto font-normal leading-relaxed">
-            12 dedicated illuminated courts, daily open drop-in play, world-class coaching, and an electric social vibe at <strong className="text-pickle-400 font-semibold">The Yards</strong>.
-          </p>
-        </div>
-
-        {/* Quick Court Reservation Card Widget */}
-        <div className="max-w-4xl mx-auto">
-          <div className="glass-panel p-4 sm:p-6 rounded-2xl sm:rounded-3xl shadow-2xl border border-pickle-500/25">
-            <div className="flex items-center justify-between mb-4 pb-3 border-b border-white/10 text-left">
-              <div className="flex items-center gap-2">
-                <span className="w-3 h-3 rounded-full bg-pickle-400 animate-ping" />
-                <span className="font-display font-bold text-white text-base sm:text-lg">Reserve Court Online</span>
-              </div>
-              <span className="text-xs text-pickle-400 font-semibold bg-pickle-500/10 px-3 py-1 rounded-full border border-pickle-500/20">
-                {VENUE_INFO.courtFee}
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          
+          {/* Left Column: Brand Story & CTAs */}
+          <div className="lg:col-span-5 space-y-6 text-left">
+            <div className="space-y-4">
+              <span className="animate-stagger-item opacity-0 text-xs font-bold uppercase tracking-[0.3em] text-[#b39364] block">
+                Petaling Jaya, Selangor
               </span>
+              
+              {/* Luxury Editorial Typography - staggered line-by-line */}
+              <h1 className="leading-[0.95] tracking-tight text-[#122c1d] uppercase">
+                <span className="animate-stagger-item opacity-0 font-serif italic font-normal text-3xl sm:text-4xl md:text-5xl lowercase tracking-normal text-[#b39364] block mb-2">
+                  play where
+                </span>
+                <span className="animate-stagger-item opacity-0 font-display font-black text-6xl sm:text-7xl md:text-8xl block">
+                  PJ PLAYS
+                </span>
+              </h1>
+              
+              <p className="animate-stagger-item opacity-0 text-base sm:text-lg text-[#4c5e52] font-light leading-relaxed max-w-md pt-2">
+                Experience Selangor's premier dedicated indoor pickleball venue. Three professional hard courts with permanent lines, nets, and full amenities at Seksyen 51A. 
+              </p>
             </div>
 
-            <form onSubmit={handleQuickBook} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 text-left">
-              {/* Date Input */}
-              <div className="bg-slate-900/80 p-3 rounded-xl border border-slate-700/60 focus-within:border-pickle-400 transition-colors">
-                <label className="block text-[11px] font-semibold text-slate-400 uppercase tracking-wider mb-1 flex items-center gap-1">
-                  <Calendar className="w-3.5 h-3.5 text-pickle-400" /> Date
-                </label>
-                <input
-                  type="date"
-                  value={selectedDate}
-                  min={new Date().toISOString().split('T')[0]}
-                  onChange={(e) => setSelectedDate(e.target.value)}
-                  className="w-full bg-transparent text-white text-sm font-medium focus:outline-none cursor-pointer"
-                />
-              </div>
-
-              {/* Time Slot Select */}
-              <div className="bg-slate-900/80 p-3 rounded-xl border border-slate-700/60 focus-within:border-pickle-400 transition-colors">
-                <label className="block text-[11px] font-semibold text-slate-400 uppercase tracking-wider mb-1 flex items-center gap-1">
-                  <Clock className="w-3.5 h-3.5 text-pickle-400" /> Time Slot
-                </label>
-                <select
-                  value={selectedTime}
-                  onChange={(e) => setSelectedTime(e.target.value)}
-                  className="w-full bg-slate-900 text-white text-sm font-medium focus:outline-none cursor-pointer"
-                >
-                  {TIME_SLOTS.map((slot) => (
-                    <option key={slot} value={slot} className="bg-slate-900 text-white">
-                      {slot}
-                    </option>
-                  ))}
-                </select>
-              </div>
-
-              {/* Players Select */}
-              <div className="bg-slate-900/80 p-3 rounded-xl border border-slate-700/60 focus-within:border-pickle-400 transition-colors">
-                <label className="block text-[11px] font-semibold text-slate-400 uppercase tracking-wider mb-1 flex items-center gap-1">
-                  <Users className="w-3.5 h-3.5 text-pickle-400" /> Group Size
-                </label>
-                <select
-                  value={players}
-                  onChange={(e) => setPlayers(Number(e.target.value))}
-                  className="w-full bg-slate-900 text-white text-sm font-medium focus:outline-none cursor-pointer"
-                >
-                  <option value={2}>2 Players (Singles)</option>
-                  <option value={4}>4 Players (Doubles)</option>
-                  <option value={6}>6 Players (Group)</option>
-                  <option value={8}>8 Players (2 Courts)</option>
-                </select>
-              </div>
-
-              {/* Submit CTA */}
-              <button
-                type="submit"
-                className="w-full h-full min-h-[50px] bg-gradient-to-r from-pickle-400 via-pickle-500 to-lime-500 hover:from-pickle-300 hover:to-pickle-400 text-slate-950 font-black text-sm uppercase tracking-wider rounded-xl shadow-lg shadow-pickle-500/30 flex items-center justify-center gap-2 transition-all hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
+            {/* Staggered Action Buttons */}
+            <div className="animate-stagger-item opacity-0 flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+              <a
+                href={VENUE_INFO.bookingUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 bg-[#122c1d] hover:bg-[#1a3a27] text-white font-bold px-8 py-4 rounded-lg transition-colors uppercase tracking-wider text-xs border border-[#122c1d] shadow-sm"
               >
-                <span>Find Court</span>
-                <ArrowRight className="w-4 h-4" />
-              </button>
-            </form>
+                <Calendar className="w-4 h-4 text-[#b39364]" />
+                <span>Book A Court</span>
+              </a>
+              <a
+                href={VENUE_INFO.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 bg-transparent hover:bg-[#122c1d]/5 text-[#122c1d] font-bold px-8 py-4 rounded-lg transition-all uppercase tracking-wider text-xs border border-[#122c1d]"
+              >
+                <MessageSquare className="w-4 h-4 text-[#b39364]" />
+                <span>WhatsApp Us</span>
+              </a>
+            </div>
+
+            {/* Minimalist Details Strip */}
+            <div className="animate-stagger-item opacity-0 pt-6 border-t border-[#122c1d]/10">
+              <div className="flex flex-wrap gap-y-2 text-xs font-bold uppercase tracking-widest text-[#122c1d]/60">
+                <span>3 Indoor Courts</span>
+                <span className="mx-2 text-[#b39364]">•</span>
+                <span>Permanent Nets</span>
+                <span className="mx-2 text-[#b39364]">•</span>
+                <span>Surau & Showers</span>
+                <span className="mx-2 text-[#b39364]">•</span>
+                <span>Open Daily</span>
+              </div>
+            </div>
           </div>
+
+          {/* Right Column: Larger Framed Image with Interactive Hover */}
+          <div className="lg:col-span-7 flex justify-center w-full">
+            <div 
+              className="animate-hero-card opacity-0 relative p-3 bg-white border border-[#b39364]/20 rounded-2xl shadow-xl w-full max-w-2xl cursor-pointer"
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            >
+              {/* Gold Offset border animated via Anime.js on hover */}
+              <div 
+                ref={borderOffsetRef}
+                className="animate-border-offset opacity-0 absolute top-0 left-0 w-full h-full border border-[#b39364]/30 rounded-2xl pointer-events-none" 
+                style={{ transform: 'translate(6px, 6px)' }}
+              />
+              
+              {/* Gold Accent corner tabs */}
+              <div className="absolute -top-1 -left-1 w-4 h-4 border-t-2 border-l-2 border-[#b39364]" />
+              <div className="absolute -bottom-1 -right-1 w-4 h-4 border-b-2 border-r-2 border-[#b39364]" />
+              
+              {/* The Photo Container */}
+              <div className="aspect-[16/10] rounded-xl overflow-hidden bg-slate-100 relative">
+                <img 
+                  src="./assets/poster-court.jpeg" 
+                  alt="Pickle Garden Indoor Courts" 
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute bottom-4 left-4 bg-[#122c1d] text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded border border-[#b39364]/30 shadow-md">
+                  Professional Indoor Layout
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
-
-        {/* Highlight Quick Stats Badges */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto pt-4">
-          <div className="glass-panel p-4 rounded-2xl flex items-center gap-3 text-left">
-            <div className="w-10 h-10 rounded-xl bg-pickle-500/20 text-pickle-400 flex items-center justify-center shrink-0">
-              <Sun className="w-5 h-5" />
-            </div>
-            <div>
-              <div className="font-display font-bold text-lg text-white">12 Courts</div>
-              <div className="text-xs text-slate-400">Dedicated Outdoor Hard</div>
-            </div>
-          </div>
-
-          <div className="glass-panel p-4 rounded-2xl flex items-center gap-3 text-left">
-            <div className="w-10 h-10 rounded-xl bg-sky-500/20 text-sky-400 flex items-center justify-center shrink-0">
-              <Zap className="w-5 h-5" />
-            </div>
-            <div>
-              <div className="font-display font-bold text-lg text-white">LED Stadium</div>
-              <div className="text-xs text-slate-400">Night Play Ready</div>
-            </div>
-          </div>
-
-          <div className="glass-panel p-4 rounded-2xl flex items-center gap-3 text-left">
-            <div className="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0">
-              <Award className="w-5 h-5" />
-            </div>
-            <div>
-              <div className="font-display font-bold text-lg text-white">$12 Drop-In</div>
-              <div className="text-xs text-slate-400">Daily Open Play</div>
-            </div>
-          </div>
-
-          <div className="glass-panel p-4 rounded-2xl flex items-center gap-3 text-left">
-            <div className="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0">
-              <ShieldCheck className="w-5 h-5" />
-            </div>
-            <div>
-              <div className="font-display font-bold text-lg text-white">4.9 ★★★★★</div>
-              <div className="text-xs text-slate-400">Ponte Vedra Community</div>
-            </div>
-          </div>
-        </div>
-
       </div>
     </section>
   );

@@ -1,104 +1,73 @@
 import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import CourtStatusGrid from './components/CourtStatusGrid';
-import ProgramsSection from './components/ProgramsSection';
-import MembershipSection from './components/MembershipSection';
-import CoachesSection from './components/CoachesSection';
-import InstagramFeed from './components/InstagramFeed';
+import QuickInfoStrip from './components/QuickInfoStrip';
+import CourtsAndFacilities from './components/CourtsAndFacilities';
+import RatesAndPromotions from './components/RatesAndPromotions';
+import CommunitySessions from './components/CommunitySessions';
+import ProShop from './components/ProShop';
 import Testimonials from './components/Testimonials';
 import LocationContact from './components/LocationContact';
 import FaqSection from './components/FaqSection';
 import Footer from './components/Footer';
-
-import BookingModal from './components/BookingModal';
-import MembershipModal from './components/MembershipModal';
-import SkillQuizModal from './components/SkillQuizModal';
+import { X } from 'lucide-react';
 
 export default function App() {
-  const [isBookingOpen, setIsBookingOpen] = useState(false);
-  const [bookingData, setBookingData] = useState({});
-
-  const [isMembershipOpen, setIsMembershipOpen] = useState(false);
-  const [selectedPlan, setSelectedPlan] = useState(null);
-
-  const [isSkillQuizOpen, setIsSkillQuizOpen] = useState(false);
-
-  const handleOpenBooking = (data = {}) => {
-    setBookingData(data);
-    setIsBookingOpen(true);
-  };
-
-  const handleSelectCourtFromGrid = (courtId) => {
-    setBookingData({ courtId });
-    setIsBookingOpen(true);
-  };
-
-  const handleOpenMembership = (plan) => {
-    setSelectedPlan(plan);
-    setIsMembershipOpen(true);
-  };
+  const [showPromo, setShowPromo] = useState(true);
 
   return (
-    <div className="min-h-screen bg-[#0b1a13] text-slate-100 font-sans selection:bg-pickle-500 selection:text-black">
-      {/* Fixed Navigation Header */}
-      <Navbar
-        onOpenBooking={() => handleOpenBooking()}
-        onOpenSkillQuiz={() => setIsSkillQuizOpen(true)}
-      />
+    <div className="min-h-screen bg-[#fdfbf7] text-[#122c1d] font-sans selection:bg-[#b39364] selection:text-white">
+      {/* Dismissible Flash-Promo Banner at the top of page */}
+      {showPromo && (
+        <div className="bg-[#122c1d] text-[#e6dcc7] border-b border-[#b39364]/20 px-4 py-2.5 text-xs sm:text-sm font-medium flex items-center justify-between z-[60] relative transition-all duration-300">
+          <div className="flex-1 text-center tracking-wide uppercase text-[11px] sm:text-xs">
+            🏓 Off-peak weekday sessions — ask us about current rates before 5pm.
+          </div>
+          <button 
+            onClick={() => setShowPromo(false)} 
+            className="p-1 hover:bg-white/10 rounded transition-colors text-white"
+            title="Dismiss"
+          >
+            <X className="w-4 h-4" />
+          </button>
+        </div>
+      )}
+
+      {/* Sticky Navigation Header */}
+      <Navbar />
 
       {/* Main Content Sections */}
       <main>
-        <Hero
-          onOpenBooking={() => setIsBookingOpen(true)}
-          onSelectSlot={(slot) => setBookingData(slot)}
-        />
+        {/* Hero Section */}
+        <Hero />
 
-        <CourtStatusGrid
-          onSelectCourt={handleSelectCourtFromGrid}
-        />
+        {/* Quick Info Strip */}
+        <QuickInfoStrip />
 
-        <ProgramsSection
-          onOpenBooking={() => handleOpenBooking()}
-        />
+        {/* About & Courts & Facilities */}
+        <CourtsAndFacilities />
 
-        <MembershipSection
-          onOpenMembershipModal={handleOpenMembership}
-        />
+        {/* Rates & Promotions */}
+        <RatesAndPromotions />
 
-        <CoachesSection
-          onOpenBooking={() => handleOpenBooking()}
-        />
+        {/* Community sessions */}
+        <CommunitySessions />
 
-        <InstagramFeed />
+        {/* Pro Shop */}
+        <ProShop />
 
+        {/* Testimonials */}
         <Testimonials />
 
+        {/* Location & Contact */}
         <LocationContact />
 
+        {/* FAQ Section */}
         <FaqSection />
       </main>
 
       {/* Footer */}
       <Footer />
-
-      {/* Interactive Modals */}
-      <BookingModal
-        isOpen={isBookingOpen}
-        onClose={() => setIsBookingOpen(false)}
-        initialData={bookingData}
-      />
-
-      <MembershipModal
-        isOpen={isMembershipOpen}
-        onClose={() => setIsMembershipOpen(false)}
-        selectedPlan={selectedPlan}
-      />
-
-      <SkillQuizModal
-        isOpen={isSkillQuizOpen}
-        onClose={() => setIsSkillQuizOpen(false)}
-      />
     </div>
   );
 }
