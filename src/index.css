@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#0b1a13] text-slate-100 font-sans antialiased selection:bg-pickle-500 selection:text-black;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0b1a13;
+}
+::-webkit-scrollbar-thumb {
+  background: #1f3d2b;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #84cc16;
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: rgba(18, 41, 29, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(132, 204, 22, 0.15);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.glass-panel-hover:hover {
+  background: rgba(26, 54, 39, 0.85);
+  border-color: rgba(132, 204, 22, 0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -15px rgba(132, 204, 22, 0.2);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #a3e635 0%, #84cc16 50%, #38bdf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #fef08a 0%, #facc15 50%, #eab308 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glow-lime {
+  box-shadow: 0 0 35px -5px rgba(132, 204, 22, 0.3);
+}
+
+/* Pickleball ball texture dots background */
+.pickle-pattern {
+  background-image: radial-gradient(rgba(132, 204, 22, 0.12) 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+}
