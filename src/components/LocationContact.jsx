@@ -7,9 +7,10 @@ export default function LocationContact() {
   const wazeUrl = "https://waze.com/ul?q=Jalan%2051A/225,%20Seksyen%2051A,%2046100%20Petaling%20Jaya,%20Selangor";
 
   return (
-    <section id="contact" className="py-24 bg-[#fdfbf7] relative">
+    // Converted background to Deep Luxury Forest Green (#0c1c14)
+    <section id="contact" className="py-24 bg-[#0c1c14] relative">
       {/* Structural lines */}
-      <div className="absolute inset-0 border-x border-[#122c1d]/5 max-w-7xl mx-auto pointer-events-none" />
+      <div className="absolute inset-0 border-x border-white/5 max-w-7xl mx-auto pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 space-y-16 relative z-10">
         
@@ -18,10 +19,10 @@ export default function LocationContact() {
           <span className="text-[#b39364] font-bold uppercase tracking-[0.25em] text-xs bg-[#b39364]/10 px-4 py-1.5 rounded-full border border-[#b39364]/25">
             VISIT & CONTACT
           </span>
-          <h2 className="font-display font-extrabold text-3xl sm:text-5xl text-[#122c1d] uppercase tracking-tight">
+          <h2 className="font-display font-extrabold text-3xl sm:text-5xl text-white uppercase tracking-tight">
             FIND PICKLE GARDEN
           </h2>
-          <p className="text-[#4c5e52] text-sm sm:text-base font-light">
+          <p className="text-[#e6dcc7] text-sm sm:text-base font-light">
             Located in Seksyen 51A, Petaling Jaya. Drop in, book a slot, or message us!
           </p>
         </div>
@@ -30,13 +31,13 @@ export default function LocationContact() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           
           {/* Location Info & Map Frame (7 cols) */}
-          <div className="lg:col-span-7 glass-panel p-6 sm:p-8 rounded-3xl space-y-6 flex flex-col justify-between border border-[#b39364]/25 shadow-xl">
+          <div className="lg:col-span-7 bg-slate-950/45 p-6 sm:p-8 rounded-3xl space-y-6 flex flex-col justify-between border border-[#b39364]/25 shadow-2xl">
             <div className="space-y-6">
               <h3 className="font-display font-bold text-2xl text-white uppercase tracking-wide border-b border-white/10 pb-3">Location & Map</h3>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-sm">
                 {/* Premium Address Card */}
-                <div className="bg-slate-950/45 p-5 rounded-2xl border border-[#b39364]/20 space-y-3">
+                <div className="bg-[#0c1c14] p-5 rounded-2xl border border-[#b39364]/20 space-y-3">
                   <div className="flex items-center gap-2 font-bold text-[#b39364] text-xs tracking-wider uppercase">
                     <MapPin className="w-4 h-4" /> Address
                   </div>
@@ -62,7 +63,7 @@ export default function LocationContact() {
                 </div>
 
                 {/* Premium Hours Card */}
-                <div className="bg-slate-950/45 p-5 rounded-2xl border border-[#b39364]/20 space-y-3">
+                <div className="bg-[#0c1c14] p-5 rounded-2xl border border-[#b39364]/20 space-y-3">
                   <div className="flex items-center gap-2 font-bold text-[#b39364] text-xs tracking-wider uppercase">
                     <Clock className="w-4 h-4" /> Opening Hours
                   </div>
@@ -78,7 +79,7 @@ export default function LocationContact() {
               </div>
             </div>
 
-            {/* Embedded Google Map Frame with border frame */}
+            {/* Embedded Google Map Frame */}
             <div className="h-64 sm:h-80 rounded-2xl overflow-hidden border border-[#b39364]/30 relative shadow-inner">
               <iframe
                 title="Pickle Garden Map"
@@ -95,7 +96,7 @@ export default function LocationContact() {
           </div>
 
           {/* Direct Support & Social Info (5 cols) */}
-          <div className="lg:col-span-5 glass-panel p-6 sm:p-8 rounded-3xl flex flex-col justify-between border border-[#b39364]/25 shadow-xl text-center sm:text-left space-y-8">
+          <div className="lg:col-span-5 bg-slate-950/45 p-6 sm:p-8 rounded-3xl flex flex-col justify-between border border-[#b39364]/25 shadow-2xl text-center sm:text-left space-y-8">
             <div className="space-y-3">
               <span className="text-xs font-bold text-[#b39364] tracking-[0.25em] uppercase">Immediate Support</span>
               <h3 className="font-display font-extrabold text-3xl text-white uppercase tracking-wide">Connect With Us</h3>
@@ -106,7 +107,7 @@ export default function LocationContact() {
 
             <div className="space-y-5">
               {/* WhatsApp Premium Callout Card */}
-              <div className="bg-slate-950/45 border border-[#b39364]/20 p-6 rounded-2xl text-left space-y-4 hover:border-[#b39364]/40 transition-all duration-300 group">
+              <div className="bg-[#0c1c14] border border-[#b39364]/20 p-6 rounded-2xl text-left space-y-4 hover:border-[#b39364]/40 transition-all duration-300 group">
                 <div className="flex items-center gap-2.5 text-[#b39364] font-bold text-base">
                   <MessageSquare className="w-5 h-5 text-[#b39364]" /> 
                   <span>WhatsApp Inquiry</span>
@@ -126,7 +127,7 @@ export default function LocationContact() {
               </div>
 
               {/* Instagram Card */}
-              <div className="bg-slate-950/45 border border-[#b39364]/20 p-6 rounded-2xl text-left space-y-4 hover:border-pink-500/30 transition-all duration-300">
+              <div className="bg-[#0c1c14] border border-[#b39364]/20 p-6 rounded-2xl text-left space-y-4 hover:border-pink-500/30 transition-all duration-300">
                 <div className="flex items-center gap-2.5 text-pink-500 font-bold text-base">
                   <Instagram className="w-5 h-5" /> 
                   <span>Instagram Community</span>

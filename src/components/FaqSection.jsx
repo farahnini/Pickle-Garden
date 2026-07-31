@@ -10,7 +10,8 @@ export default function FaqSection() {
   };
 
   return (
-    <section className="py-24 bg-[#fdfbf7] relative">
+    // Converted background to Deep Luxury Forest Green (#0c1c14)
+    <section className="py-24 bg-[#0c1c14] relative">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 space-y-12">
         
         {/* Header */}
@@ -18,15 +19,15 @@ export default function FaqSection() {
           <span className="text-[#b39364] font-bold uppercase tracking-wider text-xs bg-[#b39364]/10 px-3 py-1 rounded-full border border-[#b39364]/20">
             GOT QUESTIONS?
           </span>
-          <h2 className="font-display font-extrabold text-3xl sm:text-5xl text-[#122c1d]">
+          <h2 className="font-display font-extrabold text-3xl sm:text-5xl text-white">
             FREQUENTLY ASKED QUESTIONS
           </h2>
-          <p className="text-[#4c5e52] text-sm sm:text-base">
+          <p className="text-[#e6dcc7] text-sm sm:text-base">
             Everything you need to know before stepping onto the courts at Pickle Garden.
           </p>
         </div>
 
-        {/* FAQ Accordion List */}
+        {/* FAQ Accordion List - Keeps the premium dark glass-panel style */}
         <div className="space-y-4">
           {FAQS.map((faq, index) => {
             const isOpen = openIndex === index;
