@@ -10,3 +10,143 @@
 [2m1:19:17 am[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2mtailwind.config.js[22m
 [2m1:19:17 am[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2mtailwind.config.js[22m
 [2m1:19:32 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m1:23:11 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/Navbar.jsx, /src/components/FaqSection.jsx, /src/components/QuickInfoStrip.jsx, /src/components/Hero.jsx, /src/components/Testimonials.jsx, /src/components/ProShop.jsx, /src/components/RatesAndPromotions.jsx, /src/components/CommunitySessions.jsx, /src/components/LocationContact.jsx, /src/components/Footer.jsx, /src/components/CourtsAndFacilities.jsx[22m
+[2m1:24:17 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/LocationContact.jsx, /src/index.css[22m
+[2m1:24:17 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/LocationContact.jsx, /src/index.css[22m
+[2m1:25:05 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m1:25:12 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.jsx, /src/index.css[22m
+[2m1:25:27 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Navbar.jsx, /src/index.css[22m
+[2m1:25:27 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Navbar.jsx, /src/index.css[22m
+[2m1:25:36 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Hero.jsx, /src/index.css[22m
+[2m1:25:48 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Navbar.jsx, /src/index.css[22m
+[2m1:25:48 am[22m [31m[1m[vite][22m[39m [31mInternal server error: D:\laragon-www\Pickle-Garden\src\components\Navbar.jsx: Expected corresponding JSX closing tag for <div>. (74:8)
+
+[0m [90m 72 |[31m             [33m<[31m[33m/[31m[33mspan[31m[33m>[31m
+ [90m 73 |[31m           [33m<[31m[33m/[31m[33mdiv[31m[33m>[31m
+[31m[1m>[22m[31m[90m 74 |[31m         [33m<[31m[33m/[31m[33ma[31m[33m>[31m
+ [90m    |[31m         [31m[1m^[22m[31m
+ [90m 75 |[31m
+ [90m 76 |[31m         {[90m/* Desktop Nav Links */[31m}
+ [90m 77 |[31m         [33m<[31m[33mnav[31m className[33m=[31m[32m"hidden md:flex items-center gap-7 font-medium text-sm text-[#122c1d]"[31m[33m>[31m[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mD:/laragon-www/Pickle-Garden/src/components/Navbar.jsx[39m:74:8
+[33m  72 |              </span>
+  73 |            </div>
+  74 |          </a>
+     |          ^
+  75 |  
+  76 |          {/* Desktop Nav Links */}[39m
+      at constructor (D:\laragon-www\Pickle-Garden\node_modules\@babel\parser\lib\index.js:365:19)
+      at JSXParserMixin.raise (D:\laragon-www\Pickle-Garden\node_modules\@babel\parser\lib\index.js:6616:19)
+      at JSXParserMixin.jsxParseElementAt (D:\laragon-www\Pickle-Garden\node_modules\@babel\parser\lib\index.js:4739:16)
+      at JSXParserMixin.jsxParseElementAt (D:\laragon-www\Pickle-Garden\node_modules\@babel\parser\lib\index.js:4710:32)
+      at JSXParserMixin.jsxParseElement (D:\laragon-www\Pickle-Garden\node_modules\@babel\parser\lib\index.js:4761:17)
+      at JSXParserMixin.parseExprAtom (D:\laragon-www\Pickle-Garden\node_modules\@babel\parser\lib\index.js:4771:19)
+      at JSXParserMixin.parseExprSubscripts (D:\laragon-www\Pickle-Garden\node_modules\@babel\parser\lib\index.js:11098:23)
+      at JSXParserMixin.parseUpdate (D:\laragon-www\Pickle-Garden\node_modules\@babel\parser\lib\index.js:11083:21)
+      at JSXParserMixin.parseMaybeUnary (D:\laragon-www\Pickle-Garden\node_modules\@babel\parser\lib\index.js:11063:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (D:\laragon-www\Pickle-Garden\node_modules\@babel\parser\lib\index.js:10916:61)
+      at JSXParserMixin.parseExprOps (D:\laragon-www\Pickle-Garden\node_modules\@babel\parser\lib\index.js:10921:23)
+      at JSXParserMixin.parseMaybeConditional (D:\laragon-www\Pickle-Garden\node_modules\@babel\parser\lib\index.js:10898:23)
+      at JSXParserMixin.parseMaybeAssign (D:\laragon-www\Pickle-Garden\node_modules\@babel\parser\lib\index.js:10848:21)
+      at D:\laragon-www\Pickle-Garden\node_modules\@babel\parser\lib\index.js:10817:39
+      at JSXParserMixin.allowInAnd (D:\laragon-www\Pickle-Garden\node_modules\@babel\parser\lib\index.js:12443:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (D:\laragon-www\Pickle-Garden\node_modules\@babel\parser\lib\index.js:10817:17)
+      at JSXParserMixin.parseMaybeAssignAllowInOrVoidPattern (D:\laragon-www\Pickle-Garden\node_modules\@babel\parser\lib\index.js:12510:17)
+      at JSXParserMixin.parseParenAndDistinguishExpression (D:\laragon-www\Pickle-Garden\node_modules\@babel\parser\lib\index.js:11692:28)
+      at JSXParserMixin.parseExprAtom (D:\laragon-www\Pickle-Garden\node_modules\@babel\parser\lib\index.js:11348:23)
+      at JSXParserMixin.parseExprAtom (D:\laragon-www\Pickle-Garden\node_modules\@babel\parser\lib\index.js:4776:20)
+      at JSXParserMixin.parseExprSubscripts (D:\laragon-www\Pickle-Garden\node_modules\@babel\parser\lib\index.js:11098:23)
+      at JSXParserMixin.parseUpdate (D:\laragon-www\Pickle-Garden\node_modules\@babel\parser\lib\index.js:11083:21)
+      at JSXParserMixin.parseMaybeUnary (D:\laragon-www\Pickle-Garden\node_modules\@babel\parser\lib\index.js:11063:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (D:\laragon-www\Pickle-Garden\node_modules\@babel\parser\lib\index.js:10916:61)
+      at JSXParserMixin.parseExprOps (D:\laragon-www\Pickle-Garden\node_modules\@babel\parser\lib\index.js:10921:23)
+      at JSXParserMixin.parseMaybeConditional (D:\laragon-www\Pickle-Garden\node_modules\@babel\parser\lib\index.js:10898:23)
+      at JSXParserMixin.parseMaybeAssign (D:\laragon-www\Pickle-Garden\node_modules\@babel\parser\lib\index.js:10848:21)
+      at JSXParserMixin.parseExpressionBase (D:\laragon-www\Pickle-Garden\node_modules\@babel\parser\lib\index.js:10801:23)
+      at D:\laragon-www\Pickle-Garden\node_modules\@babel\parser\lib\index.js:10797:39
+      at JSXParserMixin.allowInAnd (D:\laragon-www\Pickle-Garden\node_modules\@babel\parser\lib\index.js:12438:16)
+      at JSXParserMixin.parseExpression (D:\laragon-www\Pickle-Garden\node_modules\@babel\parser\lib\index.js:10797:17)
+      at JSXParserMixin.parseReturnStatement (D:\laragon-www\Pickle-Garden\node_modules\@babel\parser\lib\index.js:13159:28)
+      at JSXParserMixin.parseStatementContent (D:\laragon-www\Pickle-Garden\node_modules\@babel\parser\lib\index.js:12815:21)
+      at JSXParserMixin.parseStatementLike (D:\laragon-www\Pickle-Garden\node_modules\@babel\parser\lib\index.js:12784:17)
+      at JSXParserMixin.parseStatementListItem (D:\laragon-www\Pickle-Garden\node_modules\@babel\parser\lib\index.js:12764:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (D:\laragon-www\Pickle-Garden\node_modules\@babel\parser\lib\index.js:13333:61)
+      at JSXParserMixin.parseBlockBody (D:\laragon-www\Pickle-Garden\node_modules\@babel\parser\lib\index.js:13326:10)
+      at JSXParserMixin.parseBlock (D:\laragon-www\Pickle-Garden\node_modules\@babel\parser\lib\index.js:13314:10)
+      at JSXParserMixin.parseFunctionBody (D:\laragon-www\Pickle-Garden\node_modules\@babel\parser\lib\index.js:12117:24)
+      at JSXParserMixin.parseFunctionBodyAndFinish (D:\laragon-www\Pickle-Garden\node_modules\@babel\parser\lib\index.js:12103:10)
+      at D:\laragon-www\Pickle-Garden\node_modules\@babel\parser\lib\index.js:13462:12
+      at JSXParserMixin.withSmartMixTopicForbiddingContext (D:\laragon-www\Pickle-Garden\node_modules\@babel\parser\lib\index.js:12420:14)
+      at JSXParserMixin.parseFunction (D:\laragon-www\Pickle-Garden\node_modules\@babel\parser\lib\index.js:13461:10)
+      at JSXParserMixin.parseExportDefaultExpression (D:\laragon-www\Pickle-Garden\node_modules\@babel\parser\lib\index.js:13924:19)
+      at JSXParserMixin.parseExport (D:\laragon-www\Pickle-Garden\node_modules\@babel\parser\lib\index.js:13845:25)
+      at JSXParserMixin.parseStatementContent (D:\laragon-www\Pickle-Garden\node_modules\@babel\parser\lib\index.js:12895:27)
+      at JSXParserMixin.parseStatementLike (D:\laragon-www\Pickle-Garden\node_modules\@babel\parser\lib\index.js:12784:17)
+      at JSXParserMixin.parseModuleItem (D:\laragon-www\Pickle-Garden\node_modules\@babel\parser\lib\index.js:12761:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (D:\laragon-www\Pickle-Garden\node_modules\@babel\parser\lib\index.js:13333:36)
+      at JSXParserMixin.parseBlockBody (D:\laragon-www\Pickle-Garden\node_modules\@babel\parser\lib\index.js:13326:10)
+[2m1:26:03 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Navbar.jsx, /src/index.css[22m
+[2m1:26:03 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Navbar.jsx, /src/index.css[22m
+[2m1:26:21 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Footer.jsx, /src/index.css[22m
+[2m1:26:22 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Footer.jsx, /src/index.css[22m
+[2m1:27:12 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Hero.jsx, /src/index.css[22m
+[2m1:27:24 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Hero.jsx, /src/index.css[22m
+[2m1:27:57 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/RatesAndPromotions.jsx, /src/index.css[22m
+[2m1:28:07 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/CommunitySessions.jsx, /src/index.css[22m
+[2m1:28:15 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/ProShop.jsx, /src/index.css[22m
+[2m1:28:24 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/LocationContact.jsx, /src/index.css[22m
+[2m1:28:32 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Testimonials.jsx, /src/index.css[22m
+[2m1:29:38 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Hero.jsx, /src/index.css[22m
+[2m1:29:39 am[22m [31m[1m[vite][22m[39m [31mInternal server error: Missing "./lib/anime.es.js" specifier in "animejs" package[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mD:/laragon-www/Pickle-Garden/src/components/Hero.jsx[39m
+      at e (file:///D:/laragon-www/Pickle-Garden/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:46042:25)
+      at n (file:///D:/laragon-www/Pickle-Garden/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:46042:627)
+      at o (file:///D:/laragon-www/Pickle-Garden/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:46042:1297)
+      at resolveExportsOrImports (file:///D:/laragon-www/Pickle-Garden/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:46663:18)
+      at resolveDeepImport (file:///D:/laragon-www/Pickle-Garden/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:46686:25)
+      at tryNodeResolve (file:///D:/laragon-www/Pickle-Garden/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:46451:16)
+      at ResolveIdContext.resolveId (file:///D:/laragon-www/Pickle-Garden/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:46201:19)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async PluginContainer.resolveId (file:///D:/laragon-www/Pickle-Garden/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49017:22)
+      at async TransformPluginContext.resolve (file:///D:/laragon-www/Pickle-Garden/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49178:15)
+      at async normalizeUrl (file:///D:/laragon-www/Pickle-Garden/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64300:26)
+      at async file:///D:/laragon-www/Pickle-Garden/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 6)
+      at async TransformPluginContext.transform (file:///D:/laragon-www/Pickle-Garden/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///D:/laragon-www/Pickle-Garden/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///D:/laragon-www/Pickle-Garden/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+      at async viteTransformMiddleware (file:///D:/laragon-www/Pickle-Garden/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:62106:24)
+[2m1:29:53 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Hero.jsx, /src/index.css[22m
+[2m1:30:24 am[22m [36m[1m[vite][22m[39m [32m✨ new dependencies optimized: [33manimejs[32m[39m
+[2m1:30:24 am[22m [36m[1m[vite][22m[39m [32m✨ optimized dependencies changed. reloading[39m
+[2m1:30:32 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Hero.jsx, /src/index.css[22m
+[2m1:30:54 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Hero.jsx, /src/index.css[22m
+[2m1:32:00 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Hero.jsx, /src/index.css[22m
+[2m1:33:44 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Hero.jsx, /src/index.css[22m
+[2m1:33:53 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Hero.jsx, /src/index.css[22m
+[2m1:34:50 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Hero.jsx, /src/index.css[22m
+[2m1:35:06 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/QuickInfoStrip.jsx, /src/index.css[22m
+[2m1:36:17 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/FaqSection.jsx, /src/index.css[22m
+[2m1:36:43 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/CourtsAndFacilities.jsx, /src/index.css[22m
+[2m1:37:50 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Hero.jsx, /src/index.css[22m
+[2m1:38:04 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m1:38:09 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/CourtsAndFacilities.jsx, /src/index.css[22m
+[2m1:38:16 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/RatesAndPromotions.jsx, /src/index.css[22m
+[2m1:38:22 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/CommunitySessions.jsx, /src/index.css[22m
+[2m1:38:28 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/ProShop.jsx, /src/index.css[22m
+[2m1:38:35 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/LocationContact.jsx, /src/index.css[22m
+[2m1:38:45 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Navbar.jsx, /src/index.css[22m
+[2m1:39:02 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Navbar.jsx, /src/index.css[22m
+[2m1:39:18 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/QuickInfoStrip.jsx, /src/index.css[22m
+[2m1:40:04 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Testimonials.jsx, /src/index.css[22m
+[2m1:40:30 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/LocationContact.jsx, /src/index.css[22m
+[2m1:40:30 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/LocationContact.jsx, /src/index.css[22m
+[2m1:40:50 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/FaqSection.jsx, /src/index.css[22m
+[2m1:42:13 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Hero.jsx, /src/index.css[22m
+[2m1:43:07 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Hero.jsx, /src/index.css[22m
+[2m1:43:51 am[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2mindex.html[22m
+[2m1:44:09 am[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2mtailwind.config.js[22m
+[2m1:44:19 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Hero.jsx, /src/index.css[22m
+[2m1:45:04 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Hero.jsx, /src/index.css[22m
