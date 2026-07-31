@@ -110,7 +110,7 @@ export default function Hero() {
                 href={VENUE_INFO.bookingUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2.5 bg-gradient-to-r from-[#b39364] via-[#c2a980] to-[#d4c2a3] hover:from-[#c2a980] hover:to-[#b39364] text-[#122c1d] font-black px-8 h-15 rounded-xl transition-all uppercase tracking-widest text-xs shadow-lg hover:scale-[1.02]"
+                className="flex items-center justify-center gap-2.5 bg-gradient-to-r from-[#b39364] via-[#c2a980] to-[#d4c2a3] hover:from-[#c2a980] hover:to-[#b39364] text-[#122c1d] font-black px-8 h-16 rounded-xl transition-all uppercase tracking-widest text-xs shadow-lg hover:scale-[1.02]"
               >
                 <Calendar className="w-4 h-4 text-[#122c1d]" />
                 <span>Book A Court</span>
@@ -119,7 +119,7 @@ export default function Hero() {
                 href={VENUE_INFO.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2.5 bg-white/10 hover:bg-white/20 text-white font-bold px-8 h-15 rounded-xl transition-all uppercase tracking-widest text-xs border border-white/20 backdrop-blur-sm"
+                className="flex items-center justify-center gap-2.5 bg-white/10 hover:bg-white/20 text-white font-bold px-8 h-16 rounded-xl transition-all uppercase tracking-widest text-xs border border-white/20 backdrop-blur-sm"
               >
                 <MessageSquare className="w-4 h-4 text-[#b39364]" />
                 <span>WhatsApp Us</span>
