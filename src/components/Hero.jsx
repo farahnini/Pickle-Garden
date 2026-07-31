@@ -67,13 +67,14 @@ export default function Hero() {
   };
 
   return (
-    // Clean Deep Forest Green (#0c1c14) background to make the slideshow pop
-    <section className="relative pt-36 pb-20 flex items-center justify-center bg-[#0c1c14] overflow-hidden min-h-[85vh]">
-      {/* Premium organic leaf vector pattern in background */}
-      <div 
-        className="absolute right-0 bottom-0 w-[500px] h-[500px] opacity-[0.03] bg-contain bg-no-repeat pointer-events-none"
-        style={{ backgroundImage: `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%23b39364" d="M80,20 C60,20 40,40 40,60 C40,70 45,75 50,75 C60,75 80,50 80,20 Z M30,50 C15,50 5,70 5,85 C5,90 10,95 15,95 C30,95 45,80 45,65 C45,55 35,50 30,50 Z"/></svg>')` }}
-      />
+    // Reverted back to the original court photo background cover
+    <section 
+      className="relative pt-36 pb-20 flex items-center justify-center bg-cover bg-center bg-no-repeat min-h-[85vh] overflow-hidden"
+      style={{ backgroundImage: "url('./assets/poster-court.jpeg')" }}
+    >
+      {/* Premium deep forest green and black gradient mask overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#060e0a]/90 via-[#0c1c14]/80 to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-black/40 pointer-events-none" />
       
       {/* Subtle structural grid lines */}
       <div className="absolute inset-0 border-x border-white/5 max-w-7xl mx-auto pointer-events-none" />
@@ -98,7 +99,7 @@ export default function Hero() {
                 </span>
               </h1>
               
-              <p className="animate-hero-item opacity-0 text-base sm:text-lg text-[#e6dcc7] font-light leading-relaxed max-w-md pt-2">
+              <p className="animate-hero-item opacity-0 text-lg sm:text-xl md:text-2xl text-[#e6dcc7] font-light leading-relaxed max-w-md pt-2 drop-shadow-sm">
                 Experience Selangor's premier dedicated indoor pickleball venue. Three professional hard courts with permanent lines, nets, and full amenities at Seksyen 51A. 
               </p>
             </div>
@@ -141,7 +142,7 @@ export default function Hero() {
 
           {/* Right Column: Premium Interactive Slideshow (7 cols) */}
           <div className="lg:col-span-7 animate-hero-slideshow opacity-0 flex justify-center w-full">
-            <div className="relative p-3 bg-[#122c1d] border border-[#b39364]/30 rounded-3xl shadow-2xl w-full max-w-2xl group">
+            <div className="relative p-3 bg-[#122c1d]/90 border border-[#b39364]/30 rounded-3xl shadow-2xl w-full max-w-2xl group backdrop-blur-sm">
               {/* Outer floating line */}
               <div className="absolute -top-2 -left-2 w-full h-full border border-[#b39364]/20 rounded-3xl pointer-events-none translate-x-1 translate-y-1 group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-500" />
               
